@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script.js" defer></script>
+    <title>Tailwind</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <!-- NavBar -->
+    <nav class="p-3 flex bg-white justify-between items-center">
+      <a href="#" id="brand" class="flex gap-2 items-center">
+        <img
+          src="./asserts/asset 0.png"
+          alt="logo"
+          class="object-cover max-w-12 max-h-12"
+        />
+        <span class="text-lg font-medium font-font">ToDesktop</span>
+      </a>
+      <div id="nav-menu" class="gap-12 hidden lg:flex">
+        <a href="#" class="font-medium hover:text-primary">Pricing</a>
+        <a href="#" class="font-medium hover:text-primary">Docs</a>
+        <a href="#" class="font-medium hover:text-primary">Changelog</a>
+        <a href="#" class="font-medium hover:text-primary">Blog</a>
+        <a href="#" class="font-medium hover:text-primary">Login</a>
+      </div>
+      <button
+        class="hidden lg:flex gap-2 items-center border border-gray-400 px-6 py-2 rounded-lg hover:bg-gray-600 hover:text-white"
+      >
+        <img src="./asserts/asset 1.svg" alt="img" />
+        <span>Electron Developer</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+      <button class="p-2 lg:hidden" onclick="handleMenu()">☰</button>
+
+      <div
+        id="nav-dialog"
+        class="hidden fixed bg-white inset-0 p-3 z-10 md:hidden"
+      >
+        <div id="nav-bar" class="flex justify-between">
+          <a href="#" id="brand" class="flex gap-2 items-center">
+            <img
+              src="./asserts/asset 0.png"
+              alt="logo"
+              class="object-cover max-w-12 max-h-12"
+            />
+            <span class="text-lg font-medium font-font">ToDesktop</span>
+          </a>
+          <button class="p-2 md:hidden" onclick="handleMenu()">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <div class="mt-6">
+          <a
+            href="#"
+            class="font-medium hover:text-primary m-3 p-3 hover:bg-gray-200 block rounded-lg"
+            >Pricing</a
+          >
+          <a
+            href="#"
+            class="font-medium hover:text-primary m-3 p-3 hover:bg-gray-200 block rounded-lg"
+            >Docs</a
+          >
+          <a
+            href="#"
+            class="font-medium hover:text-primary m-3 p-3 hover:bg-gray-200 block rounded-lg"
+            >Changelog</a
+          >
+          <a
+            href="#"
+            class="font-medium hover:text-primary m-3 p-3 hover:bg-gray-200 block rounded-lg"
+            >Blog</a
+          >
+          <a
+            href="#"
+            class="font-medium hover:text-primary m-3 p-3 hover:bg-gray-200 block rounded-lg4"
+            >Login</a
+          >
+        </div>
+        <div class="h-[1px] bg-gray-300">
+          <button
+            class="mt-6 w-full flex gap-2 items-center px-6 py-4 rounded-lg hover:bg-gray-300 hover:text-white"
+          >
+            <img src="./asserts/asset 1.svg" alt="img" />
+            <span>Electron Developer</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </body>
+</html>
